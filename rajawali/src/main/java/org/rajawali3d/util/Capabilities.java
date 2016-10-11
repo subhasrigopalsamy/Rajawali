@@ -123,7 +123,7 @@ public class Capabilities {
                 // to see if one of them has at least 4 bits per color
                 final int[] configAttribs = {
                         EGL10.EGL_RED_SIZE, 4, EGL10.EGL_GREEN_SIZE, 4, EGL10.EGL_BLUE_SIZE, 4,
-                        EGL10.EGL_RENDERABLE_TYPE, EGLExt.EGL_OPENGL_ES3_BIT_KHR, EGL10.EGL_NONE};
+                        EGL10.EGL_RENDERABLE_TYPE, EGLExt.EGL_OPENGL_ES2_BIT, EGL10.EGL_NONE};
                 value[0] = 0;
                 egl.eglChooseConfig(display, configAttribs, configs, 1, value);
                 mGLESMajorVersion = value[0] > 0 ? 3 : 2;
